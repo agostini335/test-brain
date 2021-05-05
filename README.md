@@ -1,2 +1,2 @@
 # test-data-scientist-reviva
-Preliminary assignment for a Data scientist position in Reviva
+Preliminary assignment for a Data Scientist position in Reviva
