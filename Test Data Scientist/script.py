@@ -39,10 +39,9 @@ lrb =  LogisticRegression(class_weight ="Balanced")
 # Train our classifier
 gnb.fit(train, train_labels)
 lr.fit(train, train_labels)
-lrb.fit(train,train_labels)
+
 
 preds_gnb = gnb.predict(test)
-preds_lrb = lrb.predict(test)
 preds_lr = lr.predict(test)
 preds_proba_lr = lr.predict_proba(test)
 
@@ -57,13 +56,7 @@ print("precision")
 print(precision_score(test_labels, preds_lr))
 print("recall")
 print(recall_score(test_labels, preds_lr))
-print("Logistic Regression Balanced")
-print("accuracy")
-print(accuracy_score(test_labels, preds_lrb))
-print("precision")
-print(precision_score(test_labels, preds_lrb))
-print("recall")
-print(recall_score(test_labels, preds_lrb))
+
 
 
 
