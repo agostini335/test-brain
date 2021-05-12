@@ -32,15 +32,15 @@ train, test, train_labels, test_labels = train_test_split(X,
                                                           Y,
                                                         test_size=0.2)
  
-# %% MODEL
+# %% Classifier
 gnb = GaussianNB()
 lr = LogisticRegression()
-lrb =  LogisticRegression(class_weight ="Balanced")
-# Train our classifier
+
+# Trainining
 gnb.fit(train, train_labels)
 lr.fit(train, train_labels)
 
-
+#compute predictions
 preds_gnb = gnb.predict(test)
 preds_lr = lr.predict(test)
 preds_proba_lr = lr.predict_proba(test)
@@ -57,7 +57,13 @@ print(precision_score(test_labels, preds_lr))
 print("recall")
 print(recall_score(test_labels, preds_lr))
 
-
+print("\nNaive Bayes")
+print("accuracy")
+print(accuracy_score(test_labels, preds_gnb))
+print("precision")
+print(precision_score(test_labels, preds_gnb))
+print("recall")
+print(recall_score(test_labels, preds_gnb))
 
 
 
